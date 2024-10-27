@@ -9,12 +9,17 @@
   <div class="grid md:grid-cols-3"> <!--Content Wrapper-->
     <div class="md:col-span-1 md:flex md:justify-end">
       <nav class="text-right">
-        <div>
+        <div class="flex justify-between items-center">
           <h1 class="font-bold uppercase p-4 border-b border-gray-100">
             <a href="/" class="hover:text-red-700">Food Ninja</a>
           </h1>
+          <div class="px-4 cursor-pointer md:hidden" id="burger">
+            <svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </div>
         </div>
-        <ul class="text-sm mt-6">
+        <ul class="text-sm mt-6 hidden md:block" id="menu">
           <li class="text-gray-700 font-bold py-1">
             <a href="" class="px-4 flex justify-end border-r-4 border-red-500">
               <span>Home</span>
@@ -44,8 +49,8 @@
     </div> <!--End nav-->
     <main class="py-16 px-12 bg-gray-100 md:col-span-2">
       <div class="text-orange-600 flex justify-center md:justify-end">
-        <a href="#" class="btn border-orange-500 md:border-2 hover:bg-red-500 hover:text-white">Login</a>
-        <a href="#" class="btn ml-2 border-orange-500 md:border-2 hover:bg-red-500 hover:text-white">Sign-Up</a>
+        <a href="#" class="btn border-orange-500 md:border-2 hover:bg-red-500 hover:text-white transition ease-out duration-500">Login</a>
+        <a href="#" class="btn ml-2 border-orange-500 md:border-2 hover:bg-red-500 hover:text-white transition ease-out duration-500">Sign-Up</a>
       </div>
       <header>
         <h2 class="text-gray-700 text-6xl font-semibold">Recipes</h2>
@@ -103,10 +108,11 @@
           <!--Cards go here-->
         </div>
         <div class="flex justify-center">
-          <div class="btn bg-gray-400 text-gray-950 hover:bg-red-400 hover:text-white">Load More</div>
+          <div class="btn bg-gray-400 text-gray-950 hover:bg-red-400 hover:text-white hover:shadow-inner hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">Load More</div>
         </div>
       </div>
     </main>
   </div> <!--Content Wrapper ends here-->
+  <script src="index.js"></script>
 </body>
 </html>
